@@ -19,3 +19,55 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$creame:rgb(182, 160, 187);
+$lightgreen: rgb(78, 36, 36);
+
+.blue{
+    color: blue;
+}
+.indigo{
+    color: rgb(155, 153, 129);
+}
+.purple{
+    color: purple;
+}
+.pink{
+    color: pink;
+}
+.orange{
+    color: orange;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color: green;
+}
+.lightgreen{
+    color: burlywood;
+}
+.teal{
+    color: teal;
+}
+.cyan{
+    color: cyan;
+}
+.red{
+    color: red;
+}
+.fontbig{
+    font-size: 20px;
+}
+.creame{
+    color: $creame;
+}
+
+.back-pink{
+    background-color: pink
+}
+.back-teal{
+    background-color: teal
+}
+.custom{
+    color: #8b79cc;
+}

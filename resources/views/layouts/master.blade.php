@@ -62,46 +62,227 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="/img/woman.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Rubaba Dowla</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+         
+               {{-- dash board --}}
+               <li class="nav-item">
+                <router-link to="/dashboard" class="nav-link">
+                    <i class="nav-icon fas fa-tachometer-alt orange"></i>
+                  <p>
+                    Dashboard
+                   
+                  </p>
+                </router-link>
+              </li>
+             <!-- accounts  -->
+              <li class="nav-item">
+                <router-link to="/accounts" class="nav-link">
+                    <i class="nav-icon fas fa-calculator purple"></i>
+                  <p>
+                    Accounts
+                   
+                  </p>
+                </router-link>
+              </li>
+
+              <li class="nav-item">
+                <router-link to="/vendor" class="nav-link">
+                    <i class="nav-icon fas fa-user-secret red"></i>
+                  <p>
+                    Vendors
+                   
+                  </p>
+                </router-link>
+              </li>
+
+              <li class="nav-item">
+                <router-link to="/category" class="nav-link">
+                    <i class="nav-icon fas fa-vector-square pink"></i>
+                  <p>
+                    Catagory
+                   
+                  </p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/rootuser" class="nav-link">
+                <i class="nav-icon fas fa-user-tie yellow"></i>
+                  <p>
+                    Customer
+                   
+                  </p>
+                </router-link>
+              </li>
+         
+              <li class="nav-item">
+                <router-link to="/electronics" class="nav-link">
+                <i class="nav-icon fab fa-product-hunt custom"></i>
+                  <p>
+                    Product
+                   
+                  </p>
+                </router-link>
+              </li>
+         
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link ">
+                <i class="nav-icon fas fa-cog cyan"></i>
               <p>
                 Management
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fa fa-angle-left "></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
+                <router-link to="/user" class="nav-link ">
+                  <i class="nav-icon fas fa-user blue nav-icon"></i>
                   <p>User</p>
-                </a>
+                </router-link>
+              </li>
+              <!-- <li class="nav-item">
+                <router-link to="/others" class="nav-link">
+                  <i class="nav-con fas fa-vactor-squre nav-icon pink"></i>
+                  <p>Other's</p>
+                </router-link>
+              </li> -->
+            </ul>
+          </li>
+
+          <!-- customers  -->
+          <!-- <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link ">
+                <i class="nav-icon fas fa-user-tie yellow"></i>
+              <p>
+                Customer's
+                <i class="right fa fa-angle-left "></i>
+              </p>
+            </a> -->
+            <!-- <ul class="nav nav-treeview"> -->
+              <!-- <li class="nav-item">
+                <router-link to="/rootuser" class="nav-link ">
+                  <i class="nav-icon fas fa-user teal nav-icon"></i>
+                  <p>Root Customer's</p>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Other's</p>
-                </a>
+                <router-link to="/reseller" class="nav-link">
+                  <i class="fas fa-luggage-cart nav-icon indigo"></i>
+                  <p>Reseller's</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/vipcustomer" class="nav-link">
+                  <i class="fas fa-vihara nav-icon green"></i>
+                  <p>VIP Customer's</p>
+                </router-link>
+              </li> -->
+            <!-- </ul> -->
+          </li>
+
+          <!-- product  -->
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link ">
+                <i class="nav-icon fas fa-money-check creame"></i>
+              <p>
+                Income
+                <i class="right fa fa-angle-left "></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/invoice" class="nav-link ">
+                  <i class="nav-icon fas fa-robot teal nav-icon"></i>
+                  <p>Invoice</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/revenue" class="nav-link">
+                  <i class="fas fa-luggage-cart nav-icon indigo"></i>
+                  <p>Revenue</p>
+                </router-link>
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+
+         <!-- expances -->
+          <!-- product  -->
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link ">
+                <i class="nav-icon fas fa-shopping-bag lightgreen"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Expences
+                <i class="right fa fa-angle-left "></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/bills" class="nav-link ">
+                  <i class="nav-icon fas fa-robot teat nav-icon"></i>
+                  <p>Purchase</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/payments" class="nav-link">
+                  <i class="fas fa-luggage-cart nav-icon indigo"></i>
+                  <p>Payment's</p>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+            <!-- customers  -->
+            <!-- <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link ">
+                <i class="nav-icon fab fa-product-hunt custom"></i>
+              <p>
+                Product's
+                <i class="right fa fa-angle-left "></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/electronics" class="nav-link ">
+                  <i class="nav-icon fas fa-laptop-medical teal nav-icon"></i>
+                  <p>Electronics</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/networking" class="nav-link">
+                  <i class="fas fa-network-wired nav-icon indigo"></i>
+                  <p>Networking</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/hardwire" class="nav-link">
+                  <i class="fas fa-microchip nav-icon green"></i>
+                  <p>Hardwire</p>
+                </router-link>
+              </li>
+            </ul>
+          </li> -->
+         
+              
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                  <i class="fas fa-power-off nav-icon red"></i>
+                  <p>
+                      {{ __('Logout') }}
+                  </p>
+               </a>
+    
+           <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">
+               @csrf
+           </form>
+      </li>
+            
+           
           </li>
         </ul>
       </nav>
@@ -117,7 +298,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
           <div class="row">
-         
+              <div class="col-md-12">
+
+                    <router-view></router-view>
+                    <vue-progress-bar></vue-progress-bar>
+              </div>
 
 
           </div>
@@ -146,7 +331,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">Shahin Alam</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
