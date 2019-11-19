@@ -15,7 +15,7 @@
                     <div class="card-body">
                        <div class="row">
                            <div class="col-md-8">
-                              <p class="asset text-bold teal">Assets</p>
+                             
                                <ul id="list1" class="text-left">
                                   <li>Equipmemts</li>
                                   <li>Account receiable</li>
@@ -23,11 +23,11 @@
                                   <li>others</li>
                               </ul>
                               <hr>
-                             <p class="total-asset red">Total Assets</p>
+                           
                            </div>
                            
                            <div class="col-md-4">
-                              <p class="taka text-bold teal">Taka</p>
+                           
                               <ul id="list2" class="text-right text-decotation-none">
                                   <li>2000</li>
                                   <li>18888</li>
@@ -35,7 +35,7 @@
                                   <li>8765</li>
                               </ul>
                               <hr>
-                              <p class="total-taka">Total Taka:<span class="text-right red">23456</span></p>
+                            
                            </div>
                        </div>
                     </div>
@@ -44,7 +44,7 @@
                     <div class="card-body">
                         <div class="row">
                            <div class="col-md-8">
-                                  <p class="asset text-bold teal">Liabilities & Owner's equity</p>
+                                  <p class="asset text-bold teal">Approved Status</p>
                                 <ul id="list1" class="text-left">
                                   <li>Note payable</li>
                                   <li>Account payable</li>

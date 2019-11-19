@@ -30,3 +30,4 @@ Route::apiResources(['bill' => 'API\BillController']);
 Route::apiResources(['billproduct' => 'API\BillProductController']);
 Route::apiResources(['revenue' => 'API\RevenueController']);
 Route::apiResources(['payment' => 'API\PaymentController']);
+

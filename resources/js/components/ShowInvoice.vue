@@ -90,8 +90,8 @@ export default {
     data(){
         return {
         //    invoice_id: parseInt(this.$route.params.invoice_id),
-        //    invoice_id1: this.$route.params.invoice_id,
-           invoice_id: '',
+           invoice_id: this.$route.params.invoice_id,
+        //    invoice_id: '',
            invoices: {}
         }
     },
@@ -101,7 +101,7 @@ export default {
         //    console.log(invoice)
         //    axios.get("api/invoice/"+this.$route.params.invoice_id)
         //    axios.get(`api/invoice/${this.invoice_id}`)
-           axios.get("api/invoice/"+this.invoice_id)
+           axios.get("/api/invoice/"+this.invoice_id)
         //    axios.get("api/invoice")
            .then(({data}) => {
                     this.invoices = data
@@ -110,12 +110,12 @@ export default {
                .catch((error) => {console.log(error)})
        }
     },
-    created: () => {
-         Bus.$on('buswithid',(id) => {
-             hey.invoice_id = id
-             console.log('this is invoice id'+hey.invoice_id)
+    created(){
+        //  Bus.$on('buswithid',(id) => {
+        //      hey.invoice_id = id
+        //      console.log('this is invoice id'+hey.invoice_id)
              
-         })
+        //  })
          this.gettheInvoice()
 }
 }

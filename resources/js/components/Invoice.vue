@@ -31,8 +31,8 @@
                                    <td>
                                       <a href="#"><i class="fas fa-edit fa-fw fontbig blue"></i> </a>
                                       <a @click="deleteInvoice(invo.id)" href="#"><i class="fas fa-trash-alt fa-fw fontbig red"></i> </a> 
-                                      <!-- <router-link  :to="`/showinvoice/${invo.id}`"><i class="fas fa-eye fa-fw fonnpm run watchtbig yellow"></i></router-link>  -->
-                                      <router-link  to="/showinvoice"><i @click="send(invo.id)" class="fas fa-eye fa-fw fonnpm run watchtbig yellow"></i></router-link> 
+                                      <router-link  :to="`/showinvoice/${invo.id}`"><i class="fas fa-eye fa-fw fonnpm run watchtbig yellow"></i></router-link> 
+                                      <!-- <router-link  to="/showinvoice"><i @click="send(invo.id)" class="fas fa-eye fa-fw fonnpm run watchtbig yellow"></i></router-link>  -->
                                    </td>      
                                </tr>
                            </tbody>

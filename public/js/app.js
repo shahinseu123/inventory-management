@@ -4458,8 +4458,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var _this2 = undefined;
-
 //
 //
 //
@@ -4551,8 +4549,8 @@ var _this2 = undefined;
   data: function data() {
     return {
       //    invoice_id: parseInt(this.$route.params.invoice_id),
-      //    invoice_id1: this.$route.params.invoice_id,
-      invoice_id: '',
+      invoice_id: this.$route.params.invoice_id,
+      //    invoice_id: '',
       invoices: {}
     };
   },
@@ -4564,7 +4562,7 @@ var _this2 = undefined;
       //    console.log(invoice)
       //    axios.get("api/invoice/"+this.$route.params.invoice_id)
       //    axios.get(`api/invoice/${this.invoice_id}`)
-      axios.get("api/invoice/" + this.invoice_id) //    axios.get("api/invoice")
+      axios.get("/api/invoice/" + this.invoice_id) //    axios.get("api/invoice")
       .then(function (_ref) {
         var data = _ref.data;
         _this.invoices = data;
@@ -4574,12 +4572,11 @@ var _this2 = undefined;
     }
   },
   created: function created() {
-    Bus.$on('buswithid', function (id) {
-      hey.invoice_id = id;
-      console.log('this is invoice id' + hey.invoice_id);
-    });
-
-    _this2.gettheInvoice();
+    //  Bus.$on('buswithid',(id) => {
+    //      hey.invoice_id = id
+    //      console.log('this is invoice id'+hey.invoice_id)
+    //  })
+    this.gettheInvoice();
   }
 });
 
@@ -67007,17 +67004,16 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("router-link", { attrs: { to: "/showinvoice" } }, [
-                        _c("i", {
-                          staticClass:
-                            "fas fa-eye fa-fw fonnpm run watchtbig yellow",
-                          on: {
-                            click: function($event) {
-                              return _vm.send(invo.id)
-                            }
-                          }
-                        })
-                      ])
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/showinvoice/" + invo.id } },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "fas fa-eye fa-fw fonnpm run watchtbig yellow"
+                          })
+                        ]
+                      )
                     ],
                     1
                   )
@@ -86075,11 +86071,11 @@ var routes = [{
 }, {
   path: '/invoice',
   component: _components_Invoice_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
-}, // { path: '/showinvoice/:invoice_id', component: ShowInvoice },
-{
-  path: '/showinvoice',
-  component: _components_ShowInvoice_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
 }, {
+  path: '/showinvoice/:invoice_id',
+  component: _components_ShowInvoice_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
+}, // { path: '/showinvoice', component: ShowInvoice },
+{
   path: '/addinvoice',
   component: _components_AddInvoice_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
 }, {
