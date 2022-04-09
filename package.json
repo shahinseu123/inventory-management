@@ -27,7 +27,7 @@
     "dependencies": {
         "@vue/babel-preset-jsx": "^1.1.0",
         "admin-lte": "^3.0.0-alpha.2",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "sweetalert2": "^8.17.6",
         "vform": "^1.0.1",
         "vue-progressbar": "^0.7.5",
